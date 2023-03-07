@@ -54,6 +54,7 @@ Coming soon
 - blast+			v2.6.0
 - bedtools			v2.27.1
 - LACHESIS 			(git commit: https://github.com/shendurelab/LACHESIS/commit/2e27abb127b037f87982021e86a45f289cc5e3be)
+- sra-cleaning		v0.2.0
 
 ### MaSuRCA
 
@@ -279,3 +280,13 @@ Then recreate the assembly from the reviewed .assembly file:
 ````
 python ./juicebox_scripts/juicebox_scripts/juicebox_assembly_converter.py -a groups.reviewed.assembly -f ../2_correct_assembly/chilense.corrected.fasta 
 ````
+
+## Cleaning after SRA report
+
+Removing and trimming the sequences listed in the Contamination.txt file received from the Sequence Read Archive after submission:
+
+````
+python sra-cleaning.py -a chilense.final.corrected.renamed.filtered.fasta -g augustus.with.hints.filtered.gff -c My_Contamination.txt -o chilense_cleaned/
+````
+
+The sra-cleaning.py script is available at https://github.com/MCorentin/sra-cleaning 
