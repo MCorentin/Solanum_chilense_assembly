@@ -335,5 +335,16 @@ Output:
 
 ### Circos
 
-![Solanum chilense LA1972 circos](./figures/circos.png?raw=true)
+Below is a circos plot representing the final assembly.
 
+From the outside to the inside, each layer represents:
+- The list of pseudomolecules
+- Gene density (purple = low density, yellow = high density)
+- SNP density against S. lycopersicum
+- SNP density against S. pennellii
+- SNP density against S. chilense LA3111
+- GC content (red = lower than genome mean, green = higher)
+
+Please refer to our publication for more details.
+
+![Solanum chilense LA1972 circos](./figures/circos.png?raw=true)
