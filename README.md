@@ -27,9 +27,16 @@ Coming soon
 	
 ## Data
 
-Coming soon
+The assembly and reads have been submitted to the Sequence Read Archive under the Bioproject:
+
+ - Bioproject PRJNA880259, link coming soon.
+
+ - The Bionano optical mapping data is available as supplementary file of the Bioproject: "SUPPF_0000004381".
+
 
 ## The assembly pipeline
+
+![Solanum chilense LA1972 assembly pipeline](./figures/chilense_assembly_pipeline_v2.png?raw=true)
 
 ### Versions
 
