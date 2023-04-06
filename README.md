@@ -40,6 +40,10 @@ The assembly and reads have been submitted to the Sequence Read Archive under th
 
 ### Versions
 
+<details>
+
+<summary>Version of the tools used to produce the assembly</summary>
+
 - MaSuRCA			v3.2.7
 - redundans			v0.13a
 - SSPACE			v1-1
@@ -52,7 +56,6 @@ The assembly and reads have been submitted to the Sequence Read Archive under th
 - GapFiller			v1-10
 - ALLHiC			v0.9.13
 - JuiceBox			v1.11.08
-
 - bwa				v0.7.17
 - perl				v5.14.4
 - samtools			v1.9
@@ -62,6 +65,8 @@ The assembly and reads have been submitted to the Sequence Read Archive under th
 - bedtools			v2.27.1
 - LACHESIS 			(git commit: https://github.com/shendurelab/LACHESIS/commit/2e27abb127b037f87982021e86a45f289cc5e3be)
 - sra-cleaning		v0.2.0
+
+</details>
 
 ### MaSuRCA
 
@@ -288,7 +293,7 @@ Then recreate the assembly from the reviewed .assembly file:
 python ./juicebox_scripts/juicebox_scripts/juicebox_assembly_converter.py -a groups.reviewed.assembly -f ../2_correct_assembly/chilense.corrected.fasta 
 ````
 
-## Cleaning after SRA report
+## Cleaning after the SRA report
 
 Removing and trimming the sequences listed in the Contamination.txt file received from the Sequence Read Archive after submission:
 
@@ -297,3 +302,38 @@ python sra-cleaning.py -a chilense.final.corrected.renamed.filtered.fasta -g aug
 ````
 
 The sra-cleaning.py script is available at https://github.com/MCorentin/sra-cleaning 
+
+
+### Running Augustus
+
+First, repeats are masked with ReapeatMasker:
+````
+RepeatMasker -pa 50 --noisy --xsmall --lib repeats_master.fasta chilense.final.corrected.renamed.filtered.fasta
+````
+
+The hints are created with the "bam2hints.pl" script from Augustus. "chilense.rna.merged.bam" comes from the
+alignment of the RNA-seq to the assembly with STAR. The resulting bam files are merged with "samtools merge".
+````
+/path/to/Augustus/auxprogs/bam2hints/bam2hints --intronsonly --in=chilense.rna.merged.bam --out=introns_chilense.gff
+````
+
+Runing Augustus with the hints:
+````
+augustus --species=tomato --UTR=on --softmasking=on --extrinsicCfgFile=extrinsic.M.RM.E.W.P.tomato.cfg --hintsfile=introns_chilense.gff --allow_hinted_splicesites=atac --alternatives-from-evidence=on chilense.final.corrected.renamed.filtered.fasta.masked > augustus.hints.gff
+````
+
+Extracting the sequences from the gff:
+````
+/path/to/Augustus/scripts/getAnnoFasta.pl augustus.hints.gff --seqfile chilense.final.corrected.renamed.filtered.fasta.masked
+````
+
+Output:
+- `augustus.hints.aa`           =  Amino acid sequences
+- `augustus.hints.cdsexons`     =  Coding exon positions on genome
+- `augustus.hints.codingseq`    =  Coding sequences only
+- `augustus.hints.mrna`         =  mRNA sequences
+
+### Circos
+
+![Solanum chilense LA1972 circos](./figures/circos.png?raw=true)
+
