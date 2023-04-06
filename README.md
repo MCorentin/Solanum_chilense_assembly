@@ -24,6 +24,8 @@ Coming soon
 	- [GapFiller](#gapfiller)
 	- [ALLHiC](#allhic)
 	- [JuiceBox](#juicebox)
+- [Running Augustus](#running-augustus)
+- [Circos](#circos)
 	
 ## Data
 
