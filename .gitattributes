@@ -1,2 +1,4 @@
 *.pl linguist-language=Perl
 *.xml linguist-language=XML
+
+*.md linguist-language=Markdown/bash
