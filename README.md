@@ -2,6 +2,10 @@
 
 Scripts and files used to perform the de novo assembly of Solanum chilense (LA1972).
 
+The gene models predicted by Augustus are available in [S.chilense.LA1972.gff](Augustus/S.chilense.LA1972.gff)
+
+The organelle assemblies and annotations are available under [organelles/](organelles/)
+
 ## How to cite
 
 Coming soon
