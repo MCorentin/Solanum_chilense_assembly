@@ -33,12 +33,11 @@ Molitor C, Kurowski T, Fidalgo Almeida PM, Kevei Z, Spindlow DJ, Rose S, Iheanyi
 	
 ## Data
 
-The assembly and reads have been submitted to the Sequence Read Archive under the Bioproject:
+S. chilense (LA1972) raw sequencing, transcriptome and genome assembly have been deposited at the NCBI’s Sequence Read Archive, under the BioProject number ![PRJNA880259](https://www.ncbi.nlm.nih.gov/bioproject/PRJNA880259/).
 
- - Bioproject PRJNA880259, link coming soon.
+The Bionano optical mapping data is available as supplementary file of the Bioproject: "SUPPF_0000004381".
 
- - The Bionano optical mapping data is available as supplementary file of the Bioproject: "SUPPF_0000004381".
-
+This Whole Genome Shotgun project has been deposited at DDBJ/ENA/GenBank under the accession JAPDHL000000000. The version described here is version ![JAPDHL010000000](https://www.ncbi.nlm.nih.gov/nuccore/JAPDHL000000000.1).
 
 ## The assembly pipeline
 
