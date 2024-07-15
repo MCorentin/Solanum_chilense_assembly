@@ -8,7 +8,7 @@ The organelle assemblies and annotations are available under [organelles/](organ
 
 ## How to cite
 
-Molitor C, Kurowski T, Fidalgo Almeida PM, Kevei Z, Spindlow DJ, Rose S, Iheanyichi JU, Prasanna HC, Thompson A, Mohareb FR *A chromosome-level genome assembly of Solanum chilense, a tomato wild relative associated with resistance to salinity and drought*, bioRxiv 2023.11.17.567531; doi: https://doi.org/10.1101/2023.11.17.567531
+Molitor C, Kurowski TJ, Fidalgo de Almeida PM, Kevei Z, Spindlow DJ, Chacko Kaitholil SR, Iheanyichi JU, Prasanna HC, Thompson AJ, Mohareb FR. *A chromosome-level genome assembly of Solanum chilense, a tomato wild relative associated with resistance to salinity and drought.* Front Plant Sci. (2024) doi: https://doi.org/10.3389/fpls.2024.1342739. PMID: 38525148; PMCID: PMC10957597.
 
 ## Table of Contents
 
