@@ -6,6 +6,12 @@ The gene models predicted by Augustus are available in [S.chilense.LA1972.gff](A
 
 The organelle assemblies and annotations are available under [organelles/](organelles/)
 
+## Assembly Statistics
+
+| Length (Mbp) | # sequences (chr + unplaced scaffolds) | Largest scaffold (bp) | N50 (bp) | # N / 100 kbp | BUSCO (Complete, Fragmented, Missing) | KAT completeness | 
+| :----------: | :------------------------------------: | :-------------------: | :------: | :-----------: | :-----------------------------------: | :--------------: |
+| 901 | 12 + 1,899 | 112,167,598 | 72,333,043 | 1,497 | C:94,9%  F:1,8%  M:3,3% | 92,95% | 
+
 ## How to cite
 
 Molitor C, Kurowski TJ, Fidalgo de Almeida PM, Kevei Z, Spindlow DJ, Chacko Kaitholil SR, Iheanyichi JU, Prasanna HC, Thompson AJ, Mohareb FR. *A chromosome-level genome assembly of Solanum chilense, a tomato wild relative associated with resistance to salinity and drought.* Front Plant Sci. (2024) doi: https://doi.org/10.3389/fpls.2024.1342739. PMID: 38525148; PMCID: PMC10957597.
